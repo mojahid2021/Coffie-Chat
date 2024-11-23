@@ -1,0 +1,43 @@
+// The buildscript block defines repositories and classpaths for Gradle plugins.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Gradle Plugin
+        classpath "com.android.tools.build:gradle:8.7.2"
+        // Hilt Plugin for Dependency Injection
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.44"
+    }
+}
+
+// Centralized plugin management for all subprojects
+plugins {
+    id 'com.android.application' version '8.1.0' apply false
+    id 'com.android.library' version '8.1.0' apply false
+    id 'com.google.dagger.hilt.android' version '2.44' apply false
+}
+
+// Shared repositories for subprojects
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
+
+// Shared Jetpack library versioning
+ext {
+    jetpack = [
+            core                : "1.12.0",
+            lifecycle_runtime   : "2.6.1",
+            lifecycle_viewmodel : "2.6.1",
+            navigation_fragment : "2.7.4",
+            navigation_ui       : "2.7.4",
+            room_runtime        : "2.6.0",
+            room_compiler       : "2.6.0",
+            work_runtime        : "2.9.0",
+            paging_runtime      : "3.2.1"
+    ]
+}
