@@ -10,6 +10,10 @@ constraintlayout = "2.2.0"
 navigation = "2.7.4"
 coroutines = "1.7.3"
 room = "2.6.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.1.0"
+firebaseFirestore = "25.1.1"
+firebaseAnalytics = "22.1.2"
 
 [libraries]
 # Core Libraries
@@ -33,3 +37,8 @@ roomCompiler = { group = "androidx.room", name = "room-compiler", version.ref = 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidxJUnit = { group = "androidx.test.ext", name = "junit", version.ref = "junitExt" }
 espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+firebaseAuth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+firebaseFirestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+firebaseAnalytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
+[plugins]
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

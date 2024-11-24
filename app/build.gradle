@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.dagger.hilt.android' // Hilt for dependency injection
+    id 'com.google.dagger.hilt.android'
+    alias(libs.plugins.google.gms.google.services) // Hilt for dependency injection
 }
 
 android {
@@ -42,42 +43,48 @@ dependencies {
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
 
-    // Jetpack Lifecycle
-    implementation "androidx.lifecycle:lifecycle-runtime:${jetpack.lifecycle_runtime}"
-    implementation "androidx.lifecycle:lifecycle-viewmodel:${jetpack.lifecycle_viewmodel}"
+    // Jetpack Libraries
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.3'
+    implementation 'androidx.room:room-runtime:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
 
-    // Jetpack Navigation
-    implementation "androidx.navigation:navigation-fragment:${jetpack.navigation_fragment}"
-    implementation "androidx.navigation:navigation-ui:${jetpack.navigation_ui}"
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-firestore:24.7.1'
 
-    // Room for local database
-    implementation "androidx.room:room-runtime:${jetpack.room_runtime}"
-    annotationProcessor "androidx.room:room-compiler:${jetpack.room_compiler}"
-
-    // WorkManager
-    implementation "androidx.work:work-runtime:${jetpack.work_runtime}"
-
-    // Paging Library
-    implementation "androidx.paging:paging-runtime:${jetpack.paging_runtime}"
-
-    // Hilt Dependency Injection
+    // Hilt
     implementation 'com.google.dagger:hilt-android:2.44'
     annotationProcessor 'com.google.dagger:hilt-android-compiler:2.44'
 
-    // Networking (Retrofit)
+    // Networking
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
-    // Image Loading (Glide)
+    // Image Loading
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
 
-    // Unit Testing
+    // Circle Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Animations
+    implementation 'com.airbnb.android:lottie:6.6.0'
+
+    // MultiDex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //circle Image
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.firebase:firebase-database:20.2.0'
+    implementation 'com.google.firebase:firebase-auth:22.1.1'
+    implementation 'com.google.firebase:firebase-storage:20.3.0'
+   // implementation 'com.google.firebase:firebase-messaging:24.1.2'
 
 }
+

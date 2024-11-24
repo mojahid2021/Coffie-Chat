@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.horizonhunters.coffiechat" />
+                  <option name="mobileSdkAppId" value="1:998249471774:android:1616b94c0afcd327f5330f" />
+                  <option name="projectId" value="coffie-chat-36bad" />
+                  <option name="projectNumber" value="998249471774" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
